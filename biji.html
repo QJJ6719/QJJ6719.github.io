@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p{
+        word-break : normal;
+    }
+</style>
+<body>
+    <p>
+        渐变<br>
+两种渐变：
+线性渐变（Linear Gradients）- 向下/向上/向左/向右/对角方向<br>
+径向渐变（Radial Gradients）- 由它们的中心定义<br>
+线性渐变：<br>
+direction:渐变的方向：设置渐变终点<br>
+默认为to bottom<br>
+如： to bottom、to top、to right、to left、to bottom right<br>
+例：background-image: linear-gradient(to right, red , yellow);<br>
+从左边开始的线性渐变。起点是红色，慢慢过渡到黄色：<br>
+       background-image: linear-gradient(to bottom left, red , yellow);<br>
+从右上角开始（到左下角）的线性渐变。起点是红色，慢慢过渡到黄色：<br>
+渐变使用角度<br>
+语法：background-image: linear-gradient(xxxdeg, color1, color2);<br>
+使用多个颜色节点：<br>
+background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);彩虹渐变<br>
+透明度:<br>
+例：background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));<br>
+       定义背景从透明渐变为红色：<br>
+ 颜色不均匀渐变：百分比表示指定颜色的标准中心线位置，百分比之间是过渡色<br>
+例：background-image: linear-gradient(to right,red 10%,green 50%,blue 75%);;<br>
+径向渐变<br>
+语法：background-image: radial-gradient(shape size at position, start-color, ..., last-color);<br>
+<br>
+<br>
+<br>
+<br>
+过渡（transition）<br>
+1.transition-property<br>
+none：关闭效果，或停止当前效果。<br>
+all：（默认）打开效果；<br>
+[property name]：特定属性的动画效果；<br>
+2、transition-duration<br>
+过渡持续时间<br>
+3、transition-timing-function（过渡线性规律（又称时间曲线）<br>
+ease：默认值，逐渐变慢<br>
+linear：匀速<br>
+ease-in：加速<br>
+ease-out：减速<br>
+ease-in-out：先加速，后减速<br>
+cubic-bezier([参数])：定义一个时间曲线（贝塞尔曲线）<br>
+4、transition-delay<br>
+ 过渡延迟<br>
+单个属性变化<br>
+例：  transition: background-color .5s linear 0s;<br>
+多属性变化<br>
+例：transition: background-color .5s ease-out 0s, border-radius .35s ease-in 0s;<br>
+.box:hover {<br>
+    background-color: #000;<br>
+    border-radius: 80px;<br>
+}<br>
+<br>
+<br>
+<br>
+<br>
+动画<br>
+1.animation-name:指定要对当前元素生效的关键帧的名字<br>
+
+2.animation-duration:指定动画的执行时间<br>
+
+3.animation-timing-function:跟transition-timing-function用法一样<br>
+
+4. animation-iteration-count:指定动画执行的次数 animation-iteration-count:infinite;（无限执行）<br>
+
+5.animation-direction:指定动画运行的方向<br>
+normal 默认值 从from向to运行 每次都是这样<br>
+reverse 从 to 向 from 运行 每次都是这样<br>
+alternate 从 from 向 to 运行 重复执行动画时反向执行<br>
+alternate-reverse 从 to 向 from 运行 重复执行动画时反向执行<br>
+
+6. animation-play-state:设置动画的执行状态<br>
+可选值:<br>
+running 默认值 动画执行<br>
+paused 动画暂停<br>
+
+7.animation-fill-mode:指定动画的填充模式<br>
+可选值:<br>
+none 默认值 动画执行完毕元素回到原来位置<br>
+forwards 动画执行完毕元素会停止在动画结束的位置<br>
+backwards 动画延时等待时，元素就会处于开始位置<br>
+both 结合了 forwards 和 backwards<br>
+
+8.animation-delay:设置动画的延时<br>
+
+8.transition:可以同时设置动画相关的所有属性,只有一个要求，如果要写延迟，则两个时间中第一个是持续时间，第二个是延迟。<br>
+<br>
+<br>
+<br>
+<br>
+滤镜<br>
+为了实现兼容性，少不了前缀-webkit-<br>
+blur 模糊<br>
+ -webkit-filter : blur(5px);<br>
+grayscale 灰度<br>
+   -webkit-filter : grayscale(100%);<br>
+sepia 褐色<br>
+ -webkit-filter : sepia(100%);<br>
+saturate 饱和度<br>
+hue-rotate 色相旋转<br>
+invert 反色<br>
+opacity 透明度<br>
+brightness 亮度<br>
+contrast 对比度<br>
+drop-shadow 阴影<br>
+ -webkit-filter : drop-shadow(15px 15px 10px #000);<br>
+可复合使用<br>
+ filter: contrast(175%) brightness(30%);<br>
+    </p>
+</body>
+</html>
