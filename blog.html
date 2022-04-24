@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客</title>
+</head>
+<script>
+  function change(str){
+      document.getElementById('container').setAttribute('class',str);
+  }
+</script>
+<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="./css/blog.css">
+<body >
+        <div class="logo-nav">
+          <a class="un" href="index.html">
+            UNdder的博客
+          </a>
+          <nav>
+            <a href="index.html">首页</a>
+            <a class="active" href="blog.html">博客</a>
+            <a href="about.html">关于</a>
+            <a href="#">联系</a>
+            <a><span id="time"></span></a>
+            <script>
+              function mytime() {
+                var a = new Date();
+                var b = a.toLocaleTimeString();
+                var c = a.toLocaleDateString();
+                document.getElementById("time").innerHTML = c + "&nbsp" + b;
+              }
+              setInterval(function () { mytime() }, 1000);
+            </script>
+          </nav>
+        </div>
+        <div class="btn-box">
+          <div onclick="change('light')">
+              <i class="fa fa-sun-o" aria-hidden="true"></i> 白天
+          </div>
+          <div onclick="change('dark')">
+              <i class="fa fa-moon-o" aria-hidden="true"></i> 黑夜
+          </div >
+        </div>
+      <div class="dark" id="container">
+          <div class="bg"></div>
+          <div class="moon-box">
+              <div class="moon"></div>
+          </div>
+          <div class="sun-box">
+              <div class="sun"></div>
+          </div>
+          <div class="sea"></div>
+      </div>
+      <div class="box-x"></div>
+      <main>
+        <section id="home-blog">
+            <div class="home-blog-title">
+              <p>最新博客</p>
+              <div></div>
+            </div>
+            <div class="home-blog-content">
+              <div class="home-blog-card" onclick="window.open('http://www.baidu.com')">
+                
+                  <img class="home-blog-img" src="https://tse2-mm.cn.bing.net/th/id/OIP-C.UzSuK5du1iw_cchU5Ej1XQHaKe?pid=ImgDet&rs=1"/>
+                  <div class="home-blog-card-title">
+                      <div> </div>
+                      <p>这是第一篇博客</p>
+                  </div>
+                
+              </div>
+              <div class="home-blog-card"  onclick="window.open('http://www.baidu.com')" >
+               
+                  <img class="home-blog-img" src="https://img.zcool.cn/community/018ec9582540d3a84a0d304f67e0b0.png@3000w_1l_0o_100sh.png"/>
+                  <div class="home-blog-card-title">
+                      <div> </div>
+                      <p>这是第二篇博客</p>
+                  </div>
+               
+              </div>
+              <div class="home-blog-card"  onclick="window.open('http://www.baidu.com')">
+                
+                  <img class="home-blog-img" src="https://img.zcool.cn/community/017e8b59a57775a801211d25836ff0.jpg@3000w_1l_0o_100sh.jpg"/>
+                  <div class="home-blog-card-title">
+                      <div> </div>
+                      <p>这是第三篇博客</p>
+                  </div>
+              
+              </div>
+              <div class="home-blog-card"  onclick="window.open('http://www.baidu.com')">
+               
+                  <img class="home-blog-img" src="https://img.zcool.cn/community/017e8b59a57775a801211d25836ff0.jpg@3000w_1l_0o_100sh.jpg"/>
+                  <div class="home-blog-card-title">
+                      <div> </div>
+                      <p>这是第四篇博客</p>
+                  </div>
+              
+              </div>
+            </div>
+            <div class="home-blog-content-flex">
+              <div class="home-blog-card-flex-1" >
+                <img class="home-blog-img-flex" src="https://up.bizhizu.com/pic_360/81/a1/36/81a136c57e97684e350c20bb92ae07db.jpg"/>
+                <div class="home-blog-card-title-flex-1">
+                  <div></div>
+                  <p>这是第五篇博客</p>
+                </div>
+              </div>
+              <div class="home-blog-card-flex-2"  >
+                <div class="home-blog-card-title-flex-2">
+                <div></div>
+                  <p>这是第六篇博客</p>
+                </div>
+                <img class="home-blog-img-flex" src="https://up.bizhizu.com/pic_360/90/50/ed/9050edde8a810679f192ec0d8fb3baf7.jpg">
+                </div>
+              </div>
+            </div>
+        </section>
+      </main>
+      <footer>
+        <div>
+          <i class="fa fa-qq" aria-hidden="true">
+            <p>3143028662</p>
+          </i>
+          <i class="fa fa-weixin" aria-hidden="true">
+            <p>qiu147-</p>
+          </i>
+          
+          <i class="fa fa-twitter" aria-hidden="true">
+            <p>UNdder</p>
+          </i>
+          
+        </div>
+        <p>@copy UNdder 2022</p>
+      </footer>
+      <script src="js/blog.js"></script>
+      <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <title>UNdder的博客</title>
+</head>
+<style>
+  body {
+    background-image: url("./img/wallpaper.jpg");
+    background-size: cover;
+    filter: grayscale(0.3);
+    height: 721px;
+  }
+</style>
+
+<body>
+  <header>
+    <div class="logo-nav">
+      <a class="un" href="index.html">
+        UNdder的博客
+      </a>
+      <nav>
+        <a class="active" href="index.html">首页</a>
+        <a href="blog.html">博客</a>
+        <a href="about.html">关于</a>
+        <a href="#">联系</a>
+        <a><span id="time"></span></a>
+        <script>
+          function mytime() {
+            var a = new Date();
+            var b = a.toLocaleTimeString();
+            var c = a.toLocaleDateString();
+            document.getElementById("time").innerHTML = c + "&nbsp" + b;
+          }
+          setInterval(function () { mytime() }, 1000);
+        </script>
+      </nav>
+    </div>
+    <div class="header-title">
+      <h1>UNDDER</h1>
+      <P>欢迎来到UNdder的博客</P>
+      <div></div>
+    </div>
+  </header>
+  
+  <div class="container">
+    <span class="boxs">
+    </span>
+    <div class="box">
+        <div class="front">
+            <div class="icon">
+                <i class="fa fa-github" aria-hidden="true"></i>
+            </div>
+            <span>github</span>
+        </div>
+        <div class="back">
+            <span><a class="ti" href="https://github.com/">github</a></span>
+            <p>访问UNdder的博客</p>
+        </div>
+    </div>
+    <div class="box">
+        <div class="front">
+            <div class="icon">
+                <i class="fa fa-google" aria-hidden="true" ></i>
+            </div>
+            <span>google</span>
+        </div>
+        <div class="back">
+            <span><a class="ti" href="#">google</a></span>
+            <p>2</p>
+        </div>
+    </div>
+    <div class="box">
+        <div class="front">
+            <div class="icon">
+                <i class="fa fa-gamepad" aria-hidden="true"></i>
+            </div>
+            <span>gamepad</span>
+        </div>
+        <div class="back">
+            <span><a class="ti" href="https://www.yikm.net/">gamepad</a></span>
+            <p>请点击</p>
+        </div>
+    </div>
+</div>
+<script src="js/index.js"></script>
+</body>
+
+</html>
